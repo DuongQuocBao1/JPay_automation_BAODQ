@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite group-by-instances="true" thread-count="0" verbose="5"
+	name="EmailWTC15To30_TestSuite" data-provider-thread-count="0">
+	<parameter name="EnvironmentName" value="QA" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="EnvironmentURLJpay" value="https://www.dev2.jpay.com/" />
+	<parameter name="EnvironmentURLStaging" value="https://staging.dev2.jpay.com/Login.aspx" />
+	<parameter name="EnvironmentURLFacility" value="https://facility.dev2.jpay.com/Login.aspx" />
+	<parameter name="browserVersion" value="60" />
+	<parameter name="ScreenShotPath" value="C:\Selenium\media_automation\Results\WEB\ScreenShots" />
+	<parameter name="ExtentReportPath" value="C:\Selenium\media_automation\Results\WEB\ExtentReport" />
+
+	<listeners>
+		<listener class-name="com.jpay.media.automation.web.utilities.WebListener" />
+	</listeners>
+
+	<test name="WTC15To30-CHROME(Email1::15.Send email with 1 eCard,16.Send email with multiple eCard,17.Send email with prepaid eCard,
+	            18.Send multiple eCard with prepaid,19.Add/remove/add eCard on WW,20.Verify auto save with eCard,
+	              21.Send eCard with filter word,22.Send Email with 1 attach image,23.Send Email with multiple attach image,
+	                24.Send prepaid  attach image,25.Send multiple attach image with prepaid,26.Auto save with attach image,
+	                  27.Prepaid Email with multiple page,e-card and attach image,,28.Try to add image with negative format,
+	                    29.Add/Remove/add image then send email,30.Pre-paid Email with multiple page E-Card and attach image.)">
+	
+		<parameter name="dataFileName" value="Email_Dev2.xlsx" />
+		<parameter name="dataSheetName" value="WTC15To30" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_15To30Test" />
+		</classes>
+	
+	</test>
+		
+
+</suite> 
+

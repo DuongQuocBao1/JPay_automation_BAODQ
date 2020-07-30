@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite group-by-instances="true" thread-count="0" verbose="5"
+	name="EmailPLTC06_TestSuite(Prelogin)" data-provider-thread-count="0">
+	<parameter name="EnvironmentName" value="QA" />
+	<parameter name="browser" value="CHROME" />
+	<parameter name="EnvironmentURLJpay" value="https://www.qa.jpay.com/" />
+	<parameter name="EnvironmentURLStaging" value="https://staging.qa.jpay.com/Login.aspx" />
+	<parameter name="EnvironmentURLFacility" value="https://facility.qa.jpay.com/Login.aspx" />
+	<parameter name="browserVersion" value="60" />
+	<parameter name="ScreenShotPath" value="C:\Selenium\media_automation\Results\WEB\ScreenShots" />
+	<parameter name="ExtentReportPath" value="C:\Selenium\media_automation\Results\WEB\ExtentReport" />
+
+	<listeners>
+		<listener class-name="com.jpay.media.automation.web.utilities.WebListener" />
+	</listeners>
+
+	<test
+		name="PLTC06(Email::User shall be able to verify all the footer link under Parole and Probation)">
+		<parameter name="dataFileName" value="EmailPrelogin.xlsx" />
+		<parameter name="dataSheetName" value="PLTC06" />
+		<classes>
+			<class name="com.jpay.media.automation.web.prelogin.testcases.EmailPLTC_06Test" />
+		</classes>
+	</test>
+
+</suite> 
+

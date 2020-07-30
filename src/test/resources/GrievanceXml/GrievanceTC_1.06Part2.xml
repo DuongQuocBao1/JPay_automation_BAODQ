@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite group-by-instances="true" thread-count="0" verbose="5"
+	name="GrievanceTC_1.06Part2TestSuite" data-provider-thread-count="0">
+	<parameter name="EnvironmentName" value="QA" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="EnvironmentURLJpay" value="https://www.qa.jpay.com/" />
+	<parameter name="EnvironmentURLStaging" value="https://staging.qa.jpay.com/Login.aspx" />
+	<parameter name="EnvironmentURLFacility" value="https://facility.qa.jpay.com/Login.aspx" />
+	<parameter name="browserVersion" value="60" />
+	<parameter name="dataFileName" value="Grievance.xlsx" />
+	<parameter name="ScreenShotPath" value="C:\Selenium\media_automation\Results\KIOSK\Web\ScreenShots" />
+	<parameter name="ExtentReportPath" value="C:\Selenium\media_automation\Results\KIOSK\Web\ExtentReport" />
+
+	<listeners>
+		<listener class-name="com.jpay.media.automation.web.utilities.WebListener" />
+	</listeners>
+
+	<test name="GrievanceTC_1.06Part2(Grievance::Validate Communication allow for certain Inmate.)">
+	<parameter name="dataSheetName" value="TC_1.06" />
+		<classes>
+			<class name="com.jpay.media.automation.web.grievancekiosk.testcases.GrievanceTC_106Part2Test" />
+		</classes>
+	</test>
+	
+
+</suite> 
+

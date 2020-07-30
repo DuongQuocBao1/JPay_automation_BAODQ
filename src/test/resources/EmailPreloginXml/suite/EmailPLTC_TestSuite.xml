@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite group-by-instances="true" thread-count="0" verbose="5"
+	name="EmailPLTC_TestSuite(Prelogin)" data-provider-thread-count="0">
+	<parameter name="EnvironmentName" value="QA" />
+	<parameter name="browser" value="CHROME" />
+	<parameter name="EnvironmentURLJpay" value="https://www.qa.jpay.com/" />
+	<parameter name="EnvironmentURLStaging" value="https://staging.qa.jpay.com/Login.aspx" />
+	<parameter name="EnvironmentURLFacility" value="https://facility.qa.jpay.com/Login.aspx" />
+	<parameter name="browserVersion" value="60" />
+	<parameter name="ScreenShotPath" value="C:\Selenium\media_automation\Results\WEB\ScreenShots" />
+	<parameter name="ExtentReportPath" value="C:\Selenium\media_automation\Results\WEB\ExtentReport" />
+
+	<listeners>
+		<listener class-name="com.jpay.media.automation.web.utilities.WebListener" />
+	</listeners>
+
+	<test name="PLTC01(Email-Prelogin::Verifying the prelogin home page header links.)">
+		<parameter name="dataFileName" value="EmailPrelogin.xlsx" />
+		<parameter name="dataSheetName" value="PLTC01" />
+		<classes>
+			<class name="com.jpay.media.automation.web.prelogin.testcases.EmailPLTC_01Test" />
+		</classes>
+	</test>
+	
+	<test name="PLTC02(Email-Prelogin::Verifying the prelogin Home Header Banner links.)">
+		<parameter name="dataFileName" value="EmailPrelogin.xlsx" />
+		<parameter name="dataSheetName" value="PLTC02" />
+		<classes>
+			<class name="com.jpay.media.automation.web.prelogin.testcases.EmailPLTC_02Test" />
+		</classes>
+	</test>
+	
+	<test name="PLTC03(Email-Prelogin::User shall be able to verify all the Home Page Middle Part link)">
+		<parameter name="dataFileName" value="EmailPrelogin.xlsx" />
+		<parameter name="dataSheetName" value="PLTC03" />
+		<classes>
+			<class name="com.jpay.media.automation.web.prelogin.testcases.EmailPLTC_03Test" />
+		</classes>
+	</test>
+	
+	<test name="PLTC04(Email-Prelogin::User shall be able to verify all the footer link under JPay.com)">
+		<parameter name="dataFileName" value="EmailPrelogin.xlsx" />
+		<parameter name="dataSheetName" value="PLTC04" />
+		<classes>
+			<class name="com.jpay.media.automation.web.prelogin.testcases.EmailPLTC_04Test" />
+		</classes>
+	</test>
+	
+	<test name="PLTC05(Email-Prelogin::User shall be able to verify all the footer link under Inmate Services)">
+		<parameter name="dataFileName" value="EmailPrelogin.xlsx" />
+		<parameter name="dataSheetName" value="PLTC05" />
+		<classes>
+			<class name="com.jpay.media.automation.web.prelogin.testcases.EmailPLTC_05Test" />
+		</classes>
+	</test>
+	
+	<test
+		name="PLTC06(Email-Prelogin::User shall be able to verify all the footer link Parole and Probation)">
+		<parameter name="dataFileName" value="EmailPrelogin.xlsx" />
+		<parameter name="dataSheetName" value="PLTC06" />
+		<classes>
+			<class name="com.jpay.media.automation.web.prelogin.testcases.EmailPLTC_06Test" />
+		</classes>
+	</test>
+	
+	<test name="PLTC07(Email-Prelogin::User shall be able to verify all the footer link under Social)">
+		<parameter name="dataFileName" value="EmailPrelogin.xlsx" />
+		<parameter name="dataSheetName" value="PLTC07" />
+		<classes>
+			<class name="com.jpay.media.automation.web.prelogin.testcases.EmailPLTC_07Test" />
+		</classes>
+	</test>
+	
+	<test name="PLTC08(Email-Prelogin::User shall be able to verify all the JPay Legal agrrements,terms and conditions.)">
+		<parameter name="dataFileName" value="EmailPrelogin.xlsx" />
+		<parameter name="dataSheetName" value="PLTC08" />
+		<classes>
+			<class name="com.jpay.media.automation.web.prelogin.testcases.EmailPLTC_08Test" />
+		</classes>
+	</test>
+	
+	<test name="PLTC09(Email-Prelogin::User shall be able to verify Facility information in www.)">
+		<parameter name="dataFileName" value="EmailPrelogin.xlsx" />
+		<parameter name="dataSheetName" value="PLTC09" />
+		<classes>
+			<class name="com.jpay.media.automation.web.prelogin.testcases.EmailPLTC_09Test" />
+		</classes>
+	</test>
+	
+	<!-- <test
+		name="PLTC10(Email-Prelogin::User shall be able to add facility in staging and verify in www.)">
+		<parameter name="dataFileName" value="EmailPrelogin.xlsx" />
+		<parameter name="dataSheetName" value="PLTC10" />
+		<classes>
+			<class name="com.jpay.media.automation.web.prelogin.testcases.EmailPLTC_10Test" />
+		</classes>
+	</test> -->
+	
+	<!-- <test name="PLTC11(Email-Prelogin::User shall be able to add and update facility in staging and verify in www.)">
+		<parameter name="dataFileName" value="EmailPrelogin.xlsx" />
+		<parameter name="dataSheetName" value="PLTC11" />
+		<classes>
+			<class name="com.jpay.media.automation.web.prelogin.testcases.EmailPLTC_11Test" />
+		</classes>
+	</test> -->
+	
+	<test
+		name="PLTC12(Email::Verify State Dropdown List for all the available pages.)">
+		<parameter name="dataFileName" value="EmailPrelogin.xlsx" />
+		<parameter name="dataSheetName" value="PLTC12" />
+		<classes>
+			<class name="com.jpay.media.automation.web.prelogin.testcases.EmailPLTC_12Test" />
+		</classes>
+	</test>
+	
+
+</suite> 
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite group-by-instances="true" thread-count="0" verbose="5"
+	name="EmailWTC141To145_TestSuite" data-provider-thread-count="0">
+	<parameter name="EnvironmentName" value="DEV2" />
+	<parameter name="browser" value="CHROME" />
+	<parameter name="EnvironmentURLJpay" value="https://www.dev2.jpay.com/" />
+	<parameter name="EnvironmentURLStaging" value="https://staging.dev2.jpay.com/Login.aspx" />
+	<parameter name="EnvironmentURLFacility" value="https://facility.dev2.jpay.com/Login.aspx" />
+	<parameter name="browserVersion" value="60" />
+	<parameter name="ScreenShotPath" value="C:\Selenium\media_automation\Results\WEB\ScreenShots" />
+	<parameter name="ExtentReportPath" value="C:\Selenium\media_automation\Results\WEB\ExtentReport" />
+
+	<listeners>
+		<listener class-name="com.jpay.media.automation.web.utilities.WebListener" />
+	</listeners>
+
+	<test name="WTC141To145(Email::141.Send money, email then Jpay credits with 1 inmate in account
+	                                142.Buy stamps send email with 1 inmate in account
+	                                 143.Send eCard with 1 inmate in account
+	                                  144.Send image with 1 inmate in account
+	                                   145.Send prepaid email with 1 eCard and 1 image with 1 inmate in account)">
+	                              
+		<parameter name="dataFileName" value="Email_Dev2.xlsx" />
+		<parameter name="dataSheetName" value="WTC141To145" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_141To145Test" />
+		</classes>
+	</test>
+
+</suite> 
+

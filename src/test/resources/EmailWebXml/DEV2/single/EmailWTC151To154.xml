@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite group-by-instances="true" thread-count="0" verbose="5"
+	name="EmailWTC151To154_TestSuite" data-provider-thread-count="0">
+	<parameter name="EnvironmentName" value="DEV2" />
+	<parameter name="browser" value="CHROME" />
+	<parameter name="EnvironmentURLJpay" value="https://www.dev2.jpay.com/" />
+	<parameter name="EnvironmentURLStaging" value="https://staging.dev2.jpay.com/Login.aspx" />
+	<parameter name="EnvironmentURLFacility" value="https://facility.dev2.jpay.com/Login.aspx" />
+	<parameter name="browserVersion" value="60" />
+	<parameter name="ScreenShotPath" value="C:\Selenium\media_automation\Results\WEB\ScreenShots" />
+	<parameter name="ExtentReportPath" value="C:\Selenium\media_automation\Results\WEB\ExtentReport" />
+
+
+	<listeners>
+		<listener class-name="com.jpay.media.automation.web.utilities.WebListener" />
+	</listeners>
+
+	<test name="WTC151To154(Email::151.Send clean email to inbound only facility and verify status in facility (TX)
+	                                152.Send filter word email to inbound only facility and verify status in facility (TX)
+	                                 153.Send eCard email to inbound only facility and verify status in facility (TX)
+	                                  154.Send Image email to inbound only facility and verify status in facility (TX))">
+	                              
+		<parameter name="dataFileName" value="Email_Dev2.xlsx" />
+		<parameter name="dataSheetName" value="WTC151To154" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_151To154Test" />
+		</classes>
+	</test>
+
+</suite> 
+

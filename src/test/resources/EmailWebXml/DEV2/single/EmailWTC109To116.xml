@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite group-by-instances="true" thread-count="0" verbose="5"
+	name="EmailWTC109To116_TestSuite" data-provider-thread-count="0">
+	<parameter name="EnvironmentName" value="DEV2" />
+	<parameter name="browser" value="CHROME" />
+	<parameter name="EnvironmentURLJpay" value="https://www.dev2.jpay.com/" />
+	<parameter name="EnvironmentURLStaging" value="https://staging.dev2.jpay.com/Login.aspx" />
+	<parameter name="EnvironmentURLFacility" value="https://facility.dev2.jpay.com/Login.aspx" />
+	<parameter name="browserVersion" value="60" />
+	<parameter name="ScreenShotPath" value="C:\Selenium\media_automation\Results\WEB\ScreenShots" />
+	<parameter name="ExtentReportPath" value="C:\Selenium\media_automation\Results\WEB\ExtentReport" />
+
+
+	<listeners>
+		<listener class-name="com.jpay.media.automation.web.utilities.WebListener" />
+	</listeners>
+
+	<test
+		name="WTC109To116(Email::109.Verify the warning message displayed in ww email compose page
+		                        110.Check all the ww user friendly message displayed
+		                       112.Send a letter and verify in sent folder in www
+		                      113.Buy stamps and verify the confirmation in the Transaction History
+		                     114.Transfer Stamps and verify the confirmation in the Transaction History
+		                    115.Send letter and verify the inmate name is same in SENT folder)">
+		<parameter name="dataFileName" value="Email_Dev2.xlsx" />
+		<parameter name="dataSheetName" value="WTC109To116" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_109To116Test" />
+		</classes>
+	</test>
+
+</suite> 
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite group-by-instances="true" thread-count="0" verbose="5"
+	name="EmailWTC65To69_TestSuite" data-provider-thread-count="0">
+	<parameter name="EnvironmentName" value="QA" />
+	<parameter name="browser" value="CHROME" />
+	<parameter name="EnvironmentURLJpay" value="https://www.qa.jpay.com/" />
+	<parameter name="EnvironmentURLStaging" value="https://staging.qa.jpay.com/Login.aspx" />
+	<parameter name="EnvironmentURLFacility" value="https://facility.qa.jpay.com/Login.aspx" />
+	<parameter name="browserVersion" value="60" />
+	<parameter name="ScreenShotPath" value="C:\Selenium\media_automation\Results\WEB\ScreenShots" />
+	<parameter name="ExtentReportPath" value="C:\Selenium\media_automation\Results\WEB\ExtentReport" />
+
+
+	<listeners>
+		<listener class-name="com.jpay.media.automation.web.utilities.WebListener" />
+	</listeners>
+
+	<test name="WTC65To69(Email:: 65.Send letter and check the stamps count,67.Send letter with Unicode,
+	             66.Attemp to send letter with less stamps/Buy Stamps/Send Letter,69.Add attachment with 
+	               no stamps/buy stamps/send email. )">
+	
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC65To69" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_65To69Test" />
+		</classes>
+	</test>
+
+</suite> 
+

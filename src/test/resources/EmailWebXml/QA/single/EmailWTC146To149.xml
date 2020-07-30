@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite group-by-instances="true" thread-count="0" verbose="5"
+	name="EmailWTC146To149_TestSuite" data-provider-thread-count="0">
+	<parameter name="EnvironmentName" value="QA" />
+	<parameter name="browser" value="CHROME" />
+	<parameter name="EnvironmentURLJpay" value="https://www.qa.jpay.com/" />
+	<parameter name="EnvironmentURLStaging" value="https://staging.qa.jpay.com/Login.aspx" />
+	<parameter name="EnvironmentURLFacility" value="https://facility.qa.jpay.com/Login.aspx" />
+	<parameter name="browserVersion" value="60" />
+	<parameter name="ScreenShotPath" value="C:\Selenium\media_automation\Results\WEB\ScreenShots" />
+	<parameter name="ExtentReportPath" value="C:\Selenium\media_automation\Results\WEB\ExtentReport" />
+
+	<listeners>
+		<listener class-name="com.jpay.media.automation.web.utilities.WebListener" />
+	</listeners>
+
+	<test name="WTC146To149(Email::146.Send Inmate Announcement with image by Facility (Consolidate/super user)
+	                                147.Send Inmate Announcement with image by Inmate (Consolidate/super user)
+	                                 148.Send Inmate Announcement with 1 Facility (Consolidate/super user)
+	                                  149.Negative testing on Send Inmate Announcement (empty, cancel))">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC146To149" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_146To149Test" />
+		</classes>
+	</test>
+
+</suite> 
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite group-by-instances="true" thread-count="0" verbose="5"
+	name="EmailWTC37To41_TestSuite" data-provider-thread-count="0">
+	<parameter name="EnvironmentName" value="QA" />
+	<parameter name="browser" value="CHROME" />
+	<parameter name="EnvironmentURLJpay" value="https://www.qa.jpay.com/" />
+	<parameter name="EnvironmentURLStaging" value="https://staging.qa.jpay.com/Login.aspx" />
+	<parameter name="EnvironmentURLFacility" value="https://facility.qa.jpay.com/Login.aspx" />
+	<parameter name="browserVersion" value="60" />
+	<parameter name="ScreenShotPath" value="C:\Selenium\media_automation\Results\WEB\ScreenShots" />
+	<parameter name="ExtentReportPath" value="C:\Selenium\media_automation\Results\WEB\ExtentReport" />
+
+
+	<listeners>
+		<listener class-name="com.jpay.media.automation.web.utilities.WebListener" />
+	</listeners>
+
+	<test name="WTC37To41(Email::37.Send Clean letter check status in facility.,38.Send filter word 
+	check status in facility.,39.Send letter with E-card  check status in facility.,40.Send 
+	letter with attach Image check status in facility.,41.Send letter with ecard and attach 
+	Image check status in facility.)">
+	
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC37To41" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_37To41Test" />
+		</classes>
+	</test>
+
+</suite> 
+

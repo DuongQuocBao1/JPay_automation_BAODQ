@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite group-by-instances="true" thread-count="0" verbose="5"
+	name="EmailWTC133To134_TestSuite" data-provider-thread-count="0">
+	<parameter name="EnvironmentName" value="DEV2" />
+	<parameter name="browser" value="CHROME" />
+	<parameter name="EnvironmentURLJpay" value="https://www.dev2.jpay.com/" />
+	<parameter name="EnvironmentURLStaging" value="https://staging.dev2.jpay.com/Login.aspx" />
+	<parameter name="EnvironmentURLFacility" value="https://facility.dev2.jpay.com/Login.aspx" />
+	<parameter name="browserVersion" value="60" />
+	<parameter name="ScreenShotPath" value="C:\Selenium\media_automation\Results\WEB\ScreenShots" />
+	<parameter name="ExtentReportPath" value="C:\Selenium\media_automation\Results\WEB\ExtentReport" />
+
+
+	<listeners>
+		<listener class-name="com.jpay.media.automation.web.utilities.WebListener" />
+	</listeners>
+
+	<test name="WTC133To134(Email::133.Verify Transfer Stamps Weekly Limit from ww/staging
+	                                134.Turn off prepaid in staging then send letter and verify stamps)">
+	                              
+		<parameter name="dataFileName" value="Email_Dev2.xlsx" />
+		<parameter name="dataSheetName" value="WTC133To134" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_133To134Test" />
+		</classes>
+	</test>
+
+</suite> 
+

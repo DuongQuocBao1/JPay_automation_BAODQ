@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite group-by-instances="true" thread-count="0" verbose="5"
+	name="EmailWTC_TestSuite" data-provider-thread-count="0">
+	<parameter name="EnvironmentName" value="QA" />
+	<parameter name="browser" value="CHROME" />
+	<parameter name="EnvironmentURLJpay" value="https://www.qa.jpay.com/" />
+	<parameter name="EnvironmentURLStaging" value="https://staging.qa.jpay.com/Login.aspx" />
+	<parameter name="EnvironmentURLFacility" value="https://facility.qa.jpay.com/Login.aspx" />
+	<parameter name="browserVersion" value="78" />
+	<parameter name="ScreenShotPath" value="C:\Selenium\media_automation\Results\WEB\ScreenShots" />
+	<parameter name="ExtentReportPath" value="C:\Selenium\media_automation\Results\WEB\ExtentReport" />
+
+
+	<listeners>
+		<listener class-name="com.jpay.media.automation.web.utilities.WebListener" />
+	</listeners>
+
+
+
+<!-- 
+	<test
+		name="WTC01(Email::User shall be able to create a new account and send letter.)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC01" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_01Test" />
+		</classes>
+	</test> -->
+
+
+
+	<test
+		name="WTC02To13(Email::02.Buy stamps in WW,03.Send email with clean letter,04.Send email with 
+	           filter word,05.Send email with SQL injections,06.Send email with HTML/XML injections,07.Send email 
+                with long letter,08.Send email with emoji,09.Send special characters,10.Send email with spanish text,
+	             11.Send email with arabic text,12.Send email with prepaid ,13.Send long prepaid letter.)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC02To13" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_02To13Test" />
+		</classes>
+	</test>
+
+
+
+	<test name="WTC14(Email::Negative testing on plain letter.)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC14" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_14Test" />
+		</classes>
+	</test>
+
+
+
+	<test
+		name="WTC15To30(Email::15.Send email with 1 eCard,16.Send email with multiple eCard,17.Send email with prepaid eCard,
+	            18.Send multiple eCard with prepaid,19.Add/remove/add eCard on WW,20.Verify auto save with eCard,
+	              21.Send eCard with filter word,22.Send Email with 1 attach image,23.Send Email with multiple attach image,
+	                24.Send prepaid  attach image,25.Send multiple attach image with prepaid,26.Auto save with attach image,
+	                  27.Prepaid Email with multiple page,e-card and attach image,,28.Try to add image with negative format,
+	                    29.Add/Remove/add image then send email,30.Pre-paid Email with multiple page E-Card and attach image.)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC15To30" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_15To30Test" />
+		</classes>
+	</test>
+
+
+	<test
+		name="WTC37To41(Email::37.Send Clean letter check status in facility.,38.Send filter word 
+	check status in facility.,39.Send letter with E-card  check status in facility.,40.Send 
+	letter with attach Image check status in facility.,41.Send letter with ecard and attach 
+	Image check status in facility.)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC37To41" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_37To41Test" />
+		</classes>
+	</test>
+
+
+	<test
+		name="WTC42(Email::Add filter word in facility/Send letter/Verify in facility/Deactivate word.)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC42" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_42Test" />
+		</classes>
+	</test>
+
+
+
+	<test name="WTC43(Email::Flag Non Dictionary Words.)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC43" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_43Test" />
+		</classes>
+	</test>
+
+
+	<test
+		name="WTC44To45(Email::44.Auto release on with inmate filter.,45.Auto release off with sender filter)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC44To45" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_44To45Test" />
+		</classes>
+	</test>
+
+
+	<test name="WTC46(Email:: Approve a flagged letter in facility.)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC46" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_46Test" />
+		</classes>
+	</test>
+
+
+	<test
+		name="WTC47To49(Email:: 47.Letter sent to security.,48.Letter sent to censored.,49.Letter return to customer)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC47To49" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_47To49Test" />
+		</classes>
+	</test>
+
+
+	<test
+		name="WTC50(Email:: Delete and discard an attachment in facility then check the letter status.)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC50" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_50Test" />
+		</classes>
+	</test>
+
+
+	<test name="WTC51(Email:: Buy and Transfer stamps .)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC51" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_51Test" />
+		</classes>
+	</test>
+
+
+	<test
+		name="WTC52(Email:: Try to buy stamps with expire card, Transfer invalid stamps amount.)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC52" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_52Test" />
+		</classes>
+	</test>
+
+
+	<test
+		name="WTC53(Email:: Verify inbox and sent archive letter and replay from inbox. )">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC53" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_53Test" />
+		</classes>
+	</test>
+
+
+	<test name="WTC54(Email:: Send letter using VG and Email/EMAIL tab. )">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC54" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_54Test" />
+		</classes>
+	</test>
+
+
+	<test name="WTC55(Email:: Add new customer and buy stamps in staging. )">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC55" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_55Test" />
+		</classes>
+	</test>
+
+	<test name="WTC56(Email:: Delete/Add Inmate in WWW and Staging. )">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC56" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_56Test" />
+		</classes>
+	</test>
+
+
+	<test
+		name="WTC57(Email:: Send support tickets/Add/Delete Stamps packages in staging. )">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC57" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_57Test" />
+		</classes>
+	</test>
+
+
+	<test name="WTC58(Email:: Send Money/Free Note In one scripts. )">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC58" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_58Test" />
+		</classes>
+	</test>
+
+
+	<test name="WTC59(Email:: Verify Forgot Password functionality is working.)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC59" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_59Test" />
+		</classes>
+	</test>
+
+
+	
+	<test
+		name="WTC60(Email:: Send prepaid, non prepaid email and verify status Yes or no in facility)">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC60" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_60Test" />
+		</classes>
+	</test>
+
+
+	<test
+		name="WTC61(Email:: Add filter word in staging/Send letter/Verify in facility/Deactivate word. )">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC61" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_61Test" />
+		</classes>
+	</test>
+
+
+	<test
+		name="WTC62(Email:: Check 'Free Prepaid' in staging/Send Letter and revert setting )">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC62" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_62Test" />
+		</classes>
+	</test>
+
+
+	<test
+		name="WTC63(Email:: Create a new account/Buy stamps/Send Email using foreign address. )">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC63" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_63Test" />
+		</classes>
+	</test> --!>
+
+
+	<test
+		name="WTC64(Email:: Unhandled and Handled Inmates Issues(By Date/InmateID). )">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC64" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_64Test" />
+		</classes>
+	</test>
+
+
+	<test
+		name="WTC65To69(Email:: 65.Send letter and check the stamps count,67.Send letter with Unicode,
+	             66.Attemp to send letter with less stamps/Buy Stamps/Send Letter,69.Add attachment with 
+	               no stamps/buy stamps/send email. )">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC65To69" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_65To69Test" />
+		</classes>
+	</test>
+
+
+<!-- 	<test
+		name="WTC68(Email:: 68.Negative testing on Create a new account/Buy stamps/Send Email. )">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC68" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_68Test" />
+		</classes>
+	</test> -->
+
+
+	<test name="WTC70(Email:: Check Reports in facility )">
+
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC70" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_70Test" />
+		</classes>
+	</test>
+	
+	
+
+	<test name="WTC71To72(Email:: 71.Add an inmate to 'Suspend Videogram Inmate' List in facility. 
+	                               72.Add an User to 'Restricted Videogram Customers' List in facility  )">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC71To72" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_71To72Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC73(Email:: Check all buckets in facility with different months category. )">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC73" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_73Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC74To75(Email:: 74.Search/Find and archived letter in facility.,
+	                               75.Search letter in facility By Date/Inmate/Customer. )">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC74To75" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_74To75Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC76To77(Email:: 76.Handle Inmate account in facility.,
+	                               77.Send Inmate Announcement by Facility/Inmate. )">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC76To77" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_76To77Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC78(Email:: Inmate Account history in staging )">
+	
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC78" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_78Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC79To80(Email:: 79.Verify all supports tickets buckets in facility.,
+	                               80.In and Out mail discarded material/Recover Deleted Letters . )">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC79To80" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_79To80Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC81(Email:: 81.Add and Delete inmate to Inmate/General and Block unlock email in facility )">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC81" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_81Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC82(Email:: 82.Inbound Auto Release Off and Sent to Require approval (Clean, eCard) )">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC82" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_82Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC83To84(Email:: 83.Inbound Auto Release Off and Sent to Security test
+	                                84.Inbound Auto Release Off and Sent to Censored test)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC83To84" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_83To84Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC85(Email:: 85.Verify stamps cost setting works as expected
+	                                 86.Negative testing enable/disable attachment and Max attach limits )">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC85" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_85Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC86(Email:: Negative testing enable/disable attachment and Max attach limits )">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC86" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_86Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC87(Email:: Free text search in facility.)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC87" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_87Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC88(Email:: Suspend inmate in facility and check EMAIL tab in www.)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC88" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_88Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC89(Email:: View ecard/image attachment in www.)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC89" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_89Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC90(Email:: Block to send Same type letter content.)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC90" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_90Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC91(Email:: Spam generator in staging.)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC91" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_91Test" />
+		</classes>
+	</test>
+	
+	
+	<!-- <test
+		name="WTC92(Email::Create a new account/Buy stamps/Send Email using Discover Card)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC92" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_92Test" />
+		</classes>
+	</test> -->
+	
+	
+	
+	<test
+		name="WTC93To95(Email::93.Preview an eCard/Attach Image attachment letter in www
+		                        94.Preview all attachment letter in www
+		                         95.Verify letter text size in ww)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC93To95" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_93To95Test" />
+		</classes>
+	</test>
+	
+	
+	<test
+		name="WTC96To98(Email::96.Verify user notifications for letter content and attachment discard in facility
+		                        97.Verify user notifications for letter censored in facility
+		                         98.Verify user notifications for letter return to customer in facility)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC96To98" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_96To98Test" />
+		</classes>
+	</test>
+	
+	
+	<test
+		name="WTC99To100(Email::99.Add/Delete Restricted Domains in facility 
+		                        100.Repair and Download Videogram  in facility)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC99To100" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_99To100Test" />
+		</classes>
+	</test>
+	
+	
+	<test
+		name="WTC101(Email:: View an eCard/Attach Image and approve/print letter in facility)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC101" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_101Test" />
+		</classes>
+	</test>
+	
+	
+	<test
+		name="WTC102(Email:: Add CC and Check T and C window from buy stamps page)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC102" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_102Test" />
+		</classes>
+	</test>
+	
+	 
+<!-- 	<test
+		name="WTC103To104(Email:: 103.Add and refund stamps from inmate Account in staging
+		                      104.Negative testing on Add and refund stamps from inmate Account in staging)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC103To104" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_103To104Test" />
+		</classes>
+	</test> -->
+	
+	
+<!-- 	<test
+		name="WTC105(Email:: Try to send letter using general forbidden user)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC105" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_105Test" />
+		</classes>
+	</test>
+	
+	
+	<test
+		name="WTC106To108(Email:: 106.Search outdated stamps in staging 
+		                      107.OptOut emails in staging
+		                       108.Block email ID, Send letter and unblock email ID in staging)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC106To108" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_106To108Test" />
+		</classes>
+	</test>
+	
+	
+	<test
+		name="WTC109To116(Email::117.Verify the warning message displayed in ww email compose page
+		                        118.Check all the ww user friendly message displayed
+		                       112.Send a letter and verify in sent folder in www
+		                      113.Buy stamps and verify the confirmation in the Transaction History
+		                     114.Transfer Stamps and verify the confirmation in the Transaction History
+		                    115.Send letter and verify the inmate name is same in SENT folder
+		                   116.Validate Inmate and Sender info on preview PDF Page)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC109To116" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_109To116Test" />
+		</classes>
+	</test>
+	
+	
+	<test
+		name="WTC117To118(Email::117.Verify Snap'N Send letter in facility (View, print)
+		                        118.Move Snap'N Send letter to different buckets in facility)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC117To118" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_117To118Test" />
+		</classes>
+	</test>
+	
+	
+	<test
+		name="WTC119To121(Email::119.Send image attachment and Validate Sender info on print Page in facility
+		                        120.Verify facility is working with consolidate user
+		                       121.Send Inmate Announcement by Facility/Inmate (Consolidate user))">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC119To121" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_119To121Test" />
+		</classes>
+	</test>
+	
+	<test
+		name="WTC122To123(Email::122.Send Plain marketing notification from staging
+		                        123.Send image marketing notification from staging)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC122To123" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_122To123Test" />
+		</classes>
+	</test>
+	
+	<test
+		name="WTC124To125(Email::124.Send email using the Email icon in www
+		                        125.Verify ww user can update the draft)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC124To125" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_124To125Test" />
+		</classes>
+	</test>
+	
+	
+	<test
+		name="WTC126(Email :: Search marketing notification in staging)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC126" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_126Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC127(Email:: Send image letter, eCard and image with AUTO OFF and verify in facility )">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC127" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_127Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC128To129(Email::128.Send letter with photo check status in facility and discard from photo approval
+	                                129.Send letter with photo check status and Send to security from photo approval )">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC128To129" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_128To129Test" />
+		</classes>
+	</test> -->
+	
+	
+	<test name="WTC130To131(Email::130.Discard a photo from photo approval (Outbound)
+	                                131.Photo Send to security from photo approval (Outbound))">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC130To131" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_130To131Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC132(Email:: Send letter with photo check status in facility and approve from photo approval)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC132" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_132Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC133To134(Email::133.Verify Transfer Stamps Weekly Limit from ww/staging
+	                                134.Turn off prepaid in staging then send letter and verify stamps)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC133To134" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_133To134Test" />
+		</classes>
+	</test>
+	
+	
+	
+	<test name="WTC135To137(Email::135.Send filter word check status in facility using consolidate user
+	                                136.Send letter with image and check status in facility using consolidate user
+	                                 137.Send Spanish text and Translate Email in facility)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC135To137" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_135To137Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC139(Email::Send money, send email then send Jpay credits in one scripts ww)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC139" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_139Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC140(Email::Send email then send Jpay credits in one scripts ww)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC140" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_140Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC141To145(Email::141.Send money, email then Jpay credits with 1 inmate in account
+	                                142.Buy stamps send email with 1 inmate in account
+	                                 143.Send eCard with 1 inmate in account
+	                                  144.Send image with 1 inmate in account
+	                                   145.Send prepaid email with 1 eCard and 1 image with 1 inmate in account)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC141To145" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_141To145Test" />
+		</classes>
+	</test>
+	
+
+	<test name="WTC146To149(Email::146.Send Inmate Announcement with image by Facility (Consolidate/super user)
+	                                147.Send Inmate Announcement with image by Inmate (Consolidate/super user)
+	                                 148.Send Inmate Announcement with 1 Facility (Consolidate/super user)
+	                                  149.Negative testing on Send Inmate Announcement (empty, cancel))">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC146To149" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_146To149Test" />
+		</classes>
+	</test>
+
+
+	<test name="WTC150(Email::Verify housing restriction for email (staging and ww))">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC150" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_150Test" />
+		</classes>
+	</test>
+
+
+	<test name="WTC151To154(Email::151.Send clean email to inbound only facility and verify status in facility (TX)
+	                                152.Send filter word email to inbound only facility and verify status in facility (TX)
+	                                 153.Send eCard email to inbound only facility and verify status in facility (TX)
+	                                  154.Send Image email to inbound only facility and verify status in facility (TX))">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC151To154" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_151To154Test" />
+		</classes>
+	</test>
+
+	<test name="WTC155To156(Email::155.Setting on/off in staging and verify transfer stamps from ww
+	                                156.Setting on/off in staging and verify prepaid response from ww)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC155To156" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_155To156Test" />
+		</classes>
+	</test>
+	
+	<test name="WTC157To158(Email::157.Verify facility intel search for mail using Inmae ID and email address(super user)
+	                                158.Verify facility intel search using Inmae ID and email address (Consolidate user))">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC157To158" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_157To158Test" />
+		</classes>
+	</test>
+
+
+	<test name="WTC159(Email::Intel search (Customer: Full Name, First Name, Last Name, Phone Number, Address, Zipcode, Account ID, IP Address) (super user))">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC159" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_159Test" />
+		</classes>
+	</test>
+
+
+	<test name="WTC160(Email::Negative testing on Intel mail search in facility)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC160" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_160Test" />
+		</classes>
+	</test>
+
+
+	<test name="WTC161To162(Email::161.Verify facility intel search in only for Mail and Out Mail (super user)
+	                                162.Verify facility intel search without show older records (super user))">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC161To162" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_161To162Test" />
+		</classes>
+	</test>
+
+
+	<test name="WTC163(Email::Add and inactive New inmate to Inmate Filter System under the intel)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC163" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_163Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC164(Email::Try to Add Existing inmate to Inmate Filter System under the intel)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC164" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_164Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC165(Email::Add New inmate to Inmate Filter and verify Destination Mail Bucket 'Sent To Security')">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC165" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_165Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC166(Email::Add New inmate to Inmate Filter and verify Destination Mail Bucket 'Censored')">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC166" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_166Test" />
+		</classes>
+	</test>
+	
+	<test name="WTC167(Email::Try to Add Existing user to Sender Filter System  under the intel)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC167" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_167Test" />
+		</classes>
+	</test>
+	
+	<test name="WTC168(Email::Add and inactive new user to Sender Filter System  under the intel)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC168" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_168Test" />
+		</classes>
+	</test>
+	
+	<test name="WTC171To173(Email::171.Send email and verify filter word is listed in facility (ww and facility  super user)
+	                                172.Send email and verify filter word is listed in facility (ww and facility  Consolidate user)
+	                                 173.Send clean letter to verify letter status sender and inmate info in facility)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC171To173" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_171To173Test" />
+		</classes>
+	</test>
+
+
+	<test
+		name="WTC174(Email::Create a new account/Buy stamps/Send Email using MasterCard)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC174" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_174Test" />
+		</classes>
+	</test>
+	
+	
+	<test
+		name="WTC175(Email::Buy stamps, Send email using 'Use a new credit/debit card' functionality with existing ww Account)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC175" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_175Test" />
+		</classes>
+	</test>
+	
+	
+	<test
+		name="WTC176(Email::Buy stamps in staging using new credit/debit card and existing credit/debit card)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC176" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_176Test" />
+		</classes>
+	</test>
+	
+		<test
+		name="WTC177(Email::Verify user can add and delete Debit/Credit Card in ww)">
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC177" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_177Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC178To182(Email::178.Change or update your email address on ww
+	                                179.Change current Password from ww
+	                                 180.Negative testing on change current Password from ww
+	                                  181.Add Phone Number and delete Phone Number from ww
+	                                   182.Negative testing on Add Phone Number from ww)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC178To182" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_178To182Test" />
+		</classes>
+	</test>
+	
+	<test name="WTC183(Email::Update an existing ww account, buy stamps and send email)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC183" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_183Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC184To186(Email::184.Verify general forbidden user can send email to good inmate in same account
+	                                185.Verify general forbidden user can buy stamps with good inmate in same account
+	                                 186.Verify general forbidden user can send email with all attach and prepaid to good inmate in same account)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC184To186" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_184To186Test" />
+		</classes>
+	</test>
+	
+
+	<test name="WTC187To188(Email::187.Pre-Login Invalid Inmate Search from ww home page and inmate search page
+	                                188.Post-Login Invalid Inmate Search from ww inmate search page)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC187To188" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_187To188Test" />
+		</classes>
+	</test>
+	
+		<test name="WTC190(Email:: Verify stamps purchased functionality with universal stamps.)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC191" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_190Test" />
+		</classes>
+	</test>
+	
+	
+	
+	<test name="WTC191(Email:: Verify stamps purchased functionality and send email with universal stamps.)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC191" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_191Test" />
+		</classes>
+	</test>
+	
+		<test name="WTC192(Email:: Verify stamps purchased functionality without universal stamps.)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC192" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_192Test" />
+		</classes>
+	</test>
+	
+	<test name="WTC193(Email:: Verify stamps purchased functionality and send email without universal stamps.)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC193" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_193Test" />
+		</classes>
+	</test>
+
+	<test name="WTC194(Email:: Verify stamps purchased and transfer functionality with universal stamps.)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC194" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_194Test" />
+		</classes>
+	</test>
+	
+	
+	<test name="WTC195(Email:: Verify stamps purchased and transfer functionality without universal stamps.)">
+	                              
+		<parameter name="dataFileName" value="Email.xlsx" />
+		<parameter name="dataSheetName" value="WTC195" />
+		<classes>
+			<class name="com.jpay.media.automation.web.email.testcases.EmailWTC_195Test" />
+		</classes>
+	</test>
+	 -->
+	
+	
+	
+	
+
+
+</suite> 
+
