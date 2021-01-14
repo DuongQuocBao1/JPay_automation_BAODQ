@@ -13,7 +13,7 @@
 		<jdk.version>1.8</jdk.version>
 		<maven-version>3.5</maven-version>
 		<com.google.guava-version>22.0</com.google.guava-version>
-		<poi-version>3.15</poi-version>
+		<poi-version>4.1.2</poi-version>
 		<org.apache.commons-version>4.1</org.apache.commons-version>
 		<com.opencsv-version>3.7</com.opencsv-version>
 		<javax.mail-version>1.4.7</javax.mail-version>
